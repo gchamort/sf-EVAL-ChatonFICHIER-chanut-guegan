@@ -1,0 +1,11 @@
+<div class="col col4">
+    <div class="card">
+        <img
+                class="card-img-top"
+                src="{{ asset("/photos/" ~ nomDuDossier|url_encode ~ "/" ~ fichier.filename|url_encode) }}">
+        <div class="card-body">
+            <h5 class="card-title">{{ fichier.filename }}</h5>
+            <a href="{{ path ("removeFile", {"dirName": nomDuDossier|url_encode, "fileName": fichier.filename|url_encode}) }}">Delete</a>
+        </div>
+    </div>
+</div>
